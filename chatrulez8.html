@@ -1,0 +1,34 @@
+<head>
+  <title>chatrulez8</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">  
+    <h2>Video Chat</h2>
+
+
+    <div id="video-container">
+      <!-- note the 'autoplay' -->
+      Their video: <video id="theirVideo" class="theirVideo" autoplay></video>
+      <br clear="all"/>
+      <img class="portalImg" src="orange_portal.gif"/>
+      <div class="myVideoBox">
+      	<video id="myVideo" muted="true" class="myVideo" autoplay></video>
+	  </div>
+      : Your video
+    </div>
+
+    <h2>Controls</h2>
+    <div>
+      <p>Your id: <span id="myPeerId">...</span></p>
+      <p>Make a call</p><br>
+      <input type="text" placeholder="Call user id..." id="remotePeerId">
+      <p><a href="#" id="makeCall">Call</a></p>
+      <p><a href="#" id="endCall">End call</a></p>
+    </div>
+</template>  
